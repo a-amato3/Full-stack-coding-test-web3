@@ -19,7 +19,7 @@ export class AppService {
       const balance = await web3.eth.getBalance(accounts[0]);
       console.log(`balance : ${balance}`);
 
-      /* // Get fromWei
+      // Get fromWei
       web3.eth.getBalance(accounts[0], async (err, result) => {
         if (err) {
           console.log(err);
@@ -27,7 +27,7 @@ export class AppService {
           const wei = await web3.utils.fromWei(result, 'ether');
           console.log(wei + ' ETH');
         }
-      }); */
+      });
     }
     return null;
   }
