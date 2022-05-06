@@ -3,6 +3,6 @@ export interface ERC20 {
   name: string;
   symbol: string;
   decimals: number;
-  balance: string;
-  balance_usd: number;
+  balance: void;
+  balance_usd: string;
 }
