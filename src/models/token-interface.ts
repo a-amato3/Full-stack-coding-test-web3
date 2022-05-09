@@ -4,5 +4,5 @@ export interface ERC20 {
   symbol: string;
   decimals: number;
   balance: void;
-  balance_usd: string;
+  balance_usd: number;
 }

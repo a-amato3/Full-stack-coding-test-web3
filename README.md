@@ -71,9 +71,10 @@ You will need to retrieve your address from the Transactions tab to use where th
 
 - I used NestJS because I am familar with the architecture of the framework from using the Angular framework.
 
-- To complete the task I would have retrieved the metadata from the token (Symbol, Name, Decimal) in the getTokenInfo method
-- Would use perhaps a differnt 3rd party lib such as Moralis to get the metadata of token in an easier way.
+- To complete the task I would have retrieved the metadata from the token (Symbol, Name, Decimal) in the getTokenInfo method using Moralis or another 3rd party lib. Using the abi from the smart contract generated from truffle did not allow me to call methods as per the documentation which should have returned metadata from the token. The getTokenInfo method has the methods that i tried to implement commented out and hard coded values to showcas how the final reponse would look like.
 
-- I would have completed the test further by allowing more time to read through documentation and decide on the best 3rd party lib to go with
+- Would have used perhaps a differnt 3rd party lib such as Moralis to get the metadata of token in an easier way or Ethers.js.
+
+- I would have completed the test to a more advanced level by allowing more time to read through documentation and decide on the best 3rd party lib to go with
 
 - The use of a FE in React to display the json object in a well designed list would also make the app more complete.

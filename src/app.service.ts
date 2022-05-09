@@ -32,7 +32,7 @@ export class AppService {
       return await this.getTokenInfo(tokenContract);
     };
 
-    const getBalance = async (): Promise<void> => {
+    const getBalance = async (): Promise<any> => {
       return await web3.eth.getBalance(account);
     };
 
@@ -44,15 +44,18 @@ export class AppService {
       symbol: token.symbol,
       decimals: token.decimals,
       balance,
-      balance_usd: '2,380.60',
+      balance_usd: balance * 2371,
     } as ERC20;
   }
 
   private async getTokenInfo(tokenContract): Promise<any> {
     const [name, symbol, decimals] = await Promise.all([
-      tokenContract.methods.name().call(),
-      tokenContract.methods.symbol().call(),
-      tokenContract.methods.decimals().call(),
+      'Ethereum',
+      'ETH',
+      18,
+      // tokenContract.methods.name().call(),
+      // tokenContract.methods.symbol().call(),
+      // tokenContract.methods.decimals().call(),
     ]);
     return { decimals, name, symbol };
   }
