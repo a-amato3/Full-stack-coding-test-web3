@@ -59,7 +59,7 @@ Please complete the setup of the software to have a node setup on your local ins
 Go to the App Service file in the prject and add your environment variables as instructed via the comments (Ganache is setup on http://localhost:7545 as default.)
 You will need to retrieve your address from the Transactions tab to use where the comment asks for Token address to be pasted
 
-## Problems and solutionn
+## Problems and solutions
 
 - The Learnng curve was the first major issue, because although I've interacted with Web3 in different projects. I have not done a full stack app as comprehensive as this one so it was necessary to spend some time learning and gathering information for wider context before starting and carrying out the test
 
@@ -67,7 +67,7 @@ You will need to retrieve your address from the Transactions tab to use where th
 
 - To overcome issues and difficulty, i browsed the varying documentation on the web for Web3 technologies. I decided to go with Web3.JS as my main library because the other ones out there (Ethers.js) was not as comprehensive.
 
-## Reasoning behind your technical choices, including trade-offs you might have made
+## Reasoning behind technical choices, including trade-offs that could be made
 
 - I used NestJS because I am familar with the architecture of the framework from using the Angular framework.
 

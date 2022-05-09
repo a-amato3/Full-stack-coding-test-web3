@@ -6,14 +6,15 @@ const abiContract = require('../build/contracts/migrations.json');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const Web3 = require('web3');
 
-const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545')); // PASTE NETWORK HERE
+const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545')); // PASTE NETWORK URL HERE (Ganache)
 @Injectable()
 export class AppService {
-  public async getAddress(): Promise<void> {
+  public async getAddress(): Promise<ERC20> {
     if (!_.isUndefined(web3)) {
       const accounts = await web3.eth.getAccounts();
       accounts.forEach((account: string): void => {
         this.getAccountDetails(account).then((results: ERC20): void => {
+          // Print JSON response
           console.log(results);
         });
       });
@@ -53,6 +54,7 @@ export class AppService {
       'Ethereum',
       'ETH',
       18,
+      // Meta Data methods to call contract and fetch Name, Symbol, Decimal
       // tokenContract.methods.name().call(),
       // tokenContract.methods.symbol().call(),
       // tokenContract.methods.decimals().call(),
