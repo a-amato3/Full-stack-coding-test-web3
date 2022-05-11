@@ -53,25 +53,23 @@ Nest is [MIT licensed](LICENSE).
 
 ## Instructions
 
-Please make sure you have Node js installed first and then install NestJS on your machine to run this project. To connect the smart contract to a network, you will need to have Ganachhe (download at: https://trufflesuite.com/ganache/).
-Please complete the setup of the software to have a node setup on your local instance which the NestJS backend can connect to.
+Please make sure you have Node js installed first and then install NestJS on your machine to run this project. To connect the smart contract to a network, you will need to have Ganache (download at: https://trufflesuite.com/ganache/). Please complete the setup of the software to have a node setup on your local instance to which the NestJS backend can connect to.
 
-Go to the App Service file in the prject and add your environment variables as instructed via the comments (Ganache is setup on http://localhost:7545 as default.)
-You will need to retrieve your address from the Transactions tab to use where the comment asks for Token address to be pasted
+Go to the App Service file in the project and add your environment variables as instructed via the comments (Ganache is set up on http://localhost:7545 as default.) You will need to retrieve your address from the Transactions tab to use where the comment asks for the Token address to be pasted.
 
 ## Problems and solutions
 
-- The Learnng curve was the first major issue, because although I've interacted with Web3 in different projects. I have not done a full stack app as comprehensive as this one so it was necessary to spend some time learning and gathering information for wider context before starting and carrying out the test
+- The Learning curve was the first major issue, although I've interacted with Web3 in different projects. I have not done a full-stack app as comprehensive as this one so it was necessary to spend some time learning and gathering information for a wider context before starting and carrying out the test
 
-- Networks were an issue at the begeinning, so i deicded to stick with localhost. In the future I would have a custom URL which would allow Ethereum Mainnet, Polygon and Arbitrum as options.
+- Networks were an issue at the beginning, so I decided to stick with localhost. In the future, I would have a custom URL which would allow Ethereum Mainnet, Polygon and Arbitrum as options.
 
-- To overcome issues and difficulty, i browsed the varying documentation on the web for Web3 technologies. I decided to go with Web3.JS as my main library because the other ones out there (Ethers.js) was not as comprehensive.
+- To overcome issues and difficulties, I browsed the varying documentation on the web for Web3 technologies. I decided to go with Web3.JS as my main library because the other ones out there (Ethers.js) were not as comprehensive.
 
 ## Reasoning behind technical choices, including trade-offs that could be made
 
-- I used NestJS because I am familar with the architecture of the framework from using the Angular framework.
+- I used NestJS because I am familiar with the architecture of the framework from using the Angular framework.
 
-- To complete the task I would have retrieved the metadata from the token (Symbol, Name, Decimal) in the getTokenInfo method using Moralis or another 3rd party lib. Using the abi from the smart contract generated from truffle did not allow me to call methods as per the documentation which should have returned metadata from the token. The getTokenInfo method has the methods that i tried to implement commented out and hard coded values to showcas how the final reponse would look like.
+- To complete the task I would have retrieved the metadata from the token (Symbol, Name, Decimal) in the getTokenInfo method using Moralis or another 3rd party lib. Using the abi from the smart contract generated from truffle did not allow me to call methods as per the documentation which should have returned metadata from the token. The getTokenInfo method has the methods that i tried to implement commented out and hardcoded values to showcase what the final response would look like.
 
 - Would have used perhaps a differnt 3rd party lib such as Moralis to get the metadata of token in an easier way or Ethers.js.
 
